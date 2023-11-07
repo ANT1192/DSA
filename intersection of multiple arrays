@@ -1,0 +1,30 @@
+class Solution {
+public:
+    vector<int> intersection(vector<vector<int>>& nums) {
+        vector<int>ans;
+        int n=nums.size();
+        for(int i=0;i<nums.size();i++)
+        {
+            sort(nums[i].begin(),nums[i].end());
+        }
+
+        for(int j=0; j<nums[0].size();j++)
+        {
+            int cnt=0;
+            int key= nums[0][j];
+            for(int i=0;i<n;i++)
+            {
+                if(binary_search(nums[i].begin(),nums[i].end(),key))
+                {
+                    cnt++;
+                }
+                if(cnt==n)
+                {
+                    ans.push_back(key);
+                }
+            }
+
+        }
+        return ans;
+    }
+};
