@@ -1,0 +1,33 @@
+class Solution {
+public:
+    bool canThreePartsEqualSum(vector<int>& arr) {
+        int T_sum=0;//total sum of arr
+        for(int i=0;i<arr.size();i++)
+        {
+            T_sum += arr[i];
+        }
+        if(T_sum%3 !=0)//arr can not be divided into 3 equal parts
+        {
+            return false;
+        }
+        //otherwise
+        int target= T_sum/3;//to check current_sum equal to target
+        int current_sum=0;
+        int count=0;//to keep count of no of parts == target
+
+        for(int i=0;i<arr.size()-1;i++)
+        {
+            current_sum += arr[i];
+            if(current_sum==target)
+            {
+                current_sum=0;
+                count++;
+                if(count==2) //if it reaches to 2 and arr %3==0 then automatically arr is divisible in 3 equal parts
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+};
