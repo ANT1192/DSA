@@ -1,0 +1,38 @@
+int maxCounter(vector<int>v){
+     int flag=v[0];
+     int cnt=0;
+     for(int i=0;i<v.size();i++)
+     {
+         if(v[i]>flag)
+         {
+             cnt++;
+             flag=v[i];
+         }
+     }
+     return cnt;
+ }
+ int minCounter(vector<int>v){
+     int flag=v[0];
+     int cnt=0;
+     for(int i=0;i<v.size();i++)
+     {
+         if(v[i]<flag)
+         {
+             cnt++;
+             flag=v[i];
+         }
+     }
+     return cnt;
+ }
+
+vector<int> breakingRecords(vector<int> scores) {
+    int a1=maxCounter(scores);
+    int a2=minCounter(scores);
+    vector<int>ans;
+    ans.push_back(a1);
+    ans.push_back(a2);
+
+    return ans;
+}
+Footer
+© 20
