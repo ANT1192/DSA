@@ -1,0 +1,25 @@
+int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
+    /*
+     * Write your code here.
+     */
+     vector<int>v;
+     int eq;
+     for(int i=0;i<keyboards.size();i++)
+     {
+         for(int j=0;j<drives.size();j++)
+         { 
+             if(keyboards[i]+drives[j]<=b)
+             {
+                 eq=keyboards[i]+drives[j];
+                 v.push_back(eq);
+             }
+         }
+     }
+     sort(v.rbegin(),v.rend());
+     
+     if(v.size()==0)
+     {
+         return -1;
+     }
+     else 
+     return v[0];
