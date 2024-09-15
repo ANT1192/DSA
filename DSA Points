@@ -1,0 +1,59 @@
+Use BOOL function when need to eleminate data and to do that use condition to eleminate either false ones or true ones by stting default bool flag to True/False as per you've thought out the algorithm.
+
+"12.09."+to_string(year) this "+to_string" is used to add (int year) to a string to return final result as "12.09.1999" if year was 1999.
+
+
+Length of string:
+Using strlen() Method
+Using string::length() Method of String Class
+Using string::size() Method of String Class
+Using Iterative for Loop
+
+
+Sr.No	Function & Purpose
+1	
+strcpy(s1, s2);
+
+Copies string s2 into string s1.
+
+2	
+strcat(s1, s2);
+
+Concatenates string s2 onto the end of string s1.
+
+3	
+strlen(s1);
+
+Returns the length of string s1.
+
+4	
+strcmp(s1, s2);
+
+Returns 0 if s1 and s2 are the same; less than 0 if s1<s2; greater than 0 if s1>s2.
+
+5	
+strchr(s1, ch);
+
+Returns a pointer to the first occurrence of character ch in string s1.
+
+6	
+strstr(s1, s2);
+
+Returns a pointer to the first occurrence of string s2 in string s1.
+
+
+
+Function	Description
+length()	This function returns the length of the string.
+swap()	This function is used to swap the values of 2 strings.
+size()	Used to find the size of string
+resize()	This function is used to resize the length of the string up to the given number of characters.
+find()	Used to find the string which is passed in parameters
+push_back()	This function is used to push the character at the end of the string
+pop_back()	This function is used to pop the last character from the string
+clear()	This function is used to remove all the elements of the string.
+find()	This function is used to search for a certain substring inside a string and returns the position of the first character of the substring.
+replace()	This function is used to replace each element in the range [first, last) that is equal to old value with new value.
+substr()	This function is used to create a substring from a given string.
+compare()	This function is used to compare two strings and returns the result in the form of an integer.
+erase()	This function is used to remove a certain part of a string.
