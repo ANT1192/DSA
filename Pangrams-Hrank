@@ -1,0 +1,24 @@
+string pangrams(string s) {
+    
+    set<char>pangram;
+    
+    for(auto x:s)
+    {
+        if(x!=' ')
+       { 
+           x=tolower(x);
+        pangram.insert(x);
+       }
+    }
+    for(auto it=pangram.begin();it!=pangram.end();++it)
+    {
+        cout<<*it;
+    }
+    cout<<endl<<pangram.size();
+    int n=pangram.size();
+    if(n==26)
+    return "pangram";
+    else
+     return "not pangram";
+
+}
