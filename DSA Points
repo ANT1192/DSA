@@ -57,3 +57,19 @@ replace()	This function is used to replace each element in the range [first, las
 substr()	This function is used to create a substring from a given string.
 compare()	This function is used to compare two strings and returns the result in the form of an integer.
 erase()	This function is used to remove a certain part of a string.
+
+
+
+TO CONVERT UpperCase to Lower
+string s = "GEEKSFORGEEKS"; 
+    
+    for (auto& x : s) { 
+        x = tolower(x); 
+    } 
+
+
+Iteration in a set 
+for(auto it=Set.begin();it!=Set.end();++it)
+    {
+        cout<<*it;
+    }
