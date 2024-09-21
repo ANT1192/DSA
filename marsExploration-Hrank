@@ -1,0 +1,16 @@
+int marsExploration(string s) {
+    
+    int altered_letters = 0;
+    for (size_t i = 1; i < s.length(); i += 3) {
+        altered_letters += (s[i - 1] != 'S');
+        altered_letters += (s[i] != 'O');
+        altered_letters += (s[i + 1] != 'S');
+    }
+    return altered_letters;
+
+}
+Code explanation:
+1. The function `marsExploration` in C++ takes a `const std::string&` as input, which is passed by reference to avoid unnecessary copying.
+2. A loop iterates over every set of three characters in the string, checking if they match the expected "SOS" pattern. If they don't, `altered_letters` is incremented.
+
+URL to question:https://www.hackerrank.com/challenges/mars-exploration/problem?isFullScreen=true
