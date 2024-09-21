@@ -1,0 +1,29 @@
+string hackerrankInString(string s) {
+    string p= "hackerrank";
+    int j=0;
+    for(int i=0;i<s.length();i++)
+    {
+        if(s[i]==p[j])
+        {
+            j++;
+        }
+    }
+    if(p.size()==j)
+    return "YES";
+    else
+     return "NO";
+
+}
+
+The hackerrankInString function checks if the string "hackerrank" appears as a subsequence in the input string s. Here's how the function works:
+
+The string p = "hackerrank" is defined as the target string to search for.
+The variable j keeps track of the position in the string p that needs to be matched.
+The loop goes through each character in the string s. For every character that matches the current character in p[j], it increments j.
+If the entire string p is found as a subsequence (i.e., j equals the length of p), it returns "YES", otherwise, it returns "NO".
+Example Explanation:
+For s = "hereiamstackerrank", the function would return "YES" because the characters of "hackerrank" appear in order as a subsequence in s.
+For s = "hackerworld", it would return "NO" because not all characters of "hackerrank" are present in sequence.
+
+
+Problem URL: https://www.hackerrank.com/challenges/hackerrank-in-a-string/problem?isFullScreen=true
