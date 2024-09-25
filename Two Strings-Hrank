@@ -23,3 +23,40 @@ string twoStrings(string s1, string s2) {
     }
 
 }
+
+
+Alternative more efficient code for same problem
+
+#include <unordered_set>
+#include <string>
+
+string twoStrings(string s1, string s2) {
+    unordered_set<char> set1;
+
+    // Insert all characters of s1 into the set
+    for (char c : s1) {
+        set1.insert(c);
+    }
+
+    // Check if any character of s2 exists in set1
+    for (char c : s2) {
+        if (set1.find(c) != set1.end()) {
+            return "YES";
+        }
+    }
+
+    return "NO";
+}
+
+
+Explanation of Optimized Version:
+Set Creation:
+
+We store all unique characters of s1 in an unordered_set<char>. This operation is O(n) where n is the length of s1.
+Checking for Common Character:
+
+For each character in s2, we check if it exists in the set. This lookup in an unordered set is O(1) on average, so the loop is O(m), where m is the length of s2.
+Time Complexity:
+Original Code: O(n * m)
+Optimized Code: O(n + m)
+This optimized version is much more efficient, especially for large inputs.
