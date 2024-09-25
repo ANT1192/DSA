@@ -1,0 +1,37 @@
+int gemstones(vector<string> arr) {
+    //initialize a set 'commonChar' which contains all characters of 1st
+    //element of array which will be used in future
+    //to interesct with other elements/strings of arr in order
+    //to find common chars
+    set<char>commonChar(arr[0].begin(),arr[0].end());
+    
+    for(size_t i=1;i<arr.size();i++)
+    {
+        //declear another set 'currentchars' which will be 
+        //dynamically iterated using find() function to check       intersection of commonChar & currentChars
+        set<char>currentchars(arr[i].begin(),arr[i].end());
+        //declear one more set 'newCommonChar' which will contain intersection elements of currentchars & commonChar sets
+        set<char>newCommonChar;
+        for(char c:commonChar)
+        {
+            if(currentchars.find(c)!= currentchars.end())
+            {
+                newCommonChar.insert(c);
+            }
+        }
+        //assign newCommonChar back to commonChar for ease of efficiency and accessebility
+        commonChar=newCommonChar;
+        
+        //exit early if case is negative
+        if(commonChar.empty())
+        {
+            return 0;
+        }
+    }
+    //commonChar cotains only common chars of all strings contained by arr hence its size will be answer.
+     return commonChar.size();
+
+}
+
+
+URL to problem: https://www.hackerrank.com/challenges/gem-stones/problem?isFullScreen=true
