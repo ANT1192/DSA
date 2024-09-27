@@ -1,0 +1,13 @@
+int theLoveLetterMystery(string s) {
+    
+    int cnt=0;
+    int i=0;int j=s.size()-1;
+    while(i<j)
+    {
+        cnt+= abs(s[i]-s[j]);
+        i++;
+        j--;
+    }
+    
+return cnt;
+}
