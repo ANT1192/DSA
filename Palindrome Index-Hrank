@@ -1,0 +1,44 @@
+bool checkPalindrome(string s, int left, int right)
+ {
+      
+    while(left<right)
+    {
+        if(s[left]!=s[right])
+        {
+           return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+ }
+
+int palindromeIndex(string s) {
+    
+int left=0;
+int right=s.size()-1;
+
+while(left<right)
+    {
+        if(s[left]==s[right])
+        {
+           left++;
+           right--;
+        }
+        else {
+        if(checkPalindrome(s,left+1,right))
+        {
+            return left;
+        }
+        else if(checkPalindrome(s, left, right-1))
+        {
+            return right;
+        }
+        else {
+        return -1;
+        }
+        }
+        
+    }
+return -1;
+}
