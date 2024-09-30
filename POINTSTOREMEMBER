@@ -73,3 +73,11 @@ for(auto it=Set.begin();it!=Set.end();++it)
     {
         cout<<*it;
     }
+
+
+TO COUNT FREQUENCY OF CHARACTERS IN A STRING USING A SET
+vector<int> charFreq(26, 0);  // Step 1: Count character frequencies
+    
+    for (char c : s) {
+        charFreq[c - 'a']++;
+    }
