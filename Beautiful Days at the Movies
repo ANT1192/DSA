@@ -1,0 +1,26 @@
+int reverse_a_number(int num)
+ {
+     int rev_num=0;
+     while(num>0)
+     {
+         rev_num = rev_num*10 + num%10;
+         num = num / 10;
+     }
+     return rev_num;
+ }
+
+
+int beautifulDays(int i, int j, int k) {
+    int beautiful_days=0;
+ for(int l=i;l<=j;l++)
+ {
+     int reverse_l= reverse_a_number(l);
+     double diff=abs(l-reverse_l);
+     double ans=diff/k;
+     if(floor(ans)==ans)
+     {
+      beautiful_days++;   
+     }
+ }
+ return beautiful_days;
+}
