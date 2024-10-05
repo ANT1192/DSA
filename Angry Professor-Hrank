@@ -1,0 +1,18 @@
+string angryProfessor(int k, vector<int> a) {
+    int arrived_student=0;
+    for(int i=0;i<a.size();i++)
+    {
+        if(a[i]<=0)
+        {
+            arrived_student++;
+            
+        }
+    }
+    cout<<arrived_student;
+            cout<<endl;
+    if(arrived_student<k)
+     {return "YES";}
+    else
+     return "NO";
+
+}
