@@ -1,0 +1,13 @@
+int findDigits(int n) {
+    int cnt=0;
+    int num=n;
+    while(n){
+     int r = n%10;
+     if(r!=0 && num%r==0)
+     cnt++;
+     n=n/10;
+    }
+return cnt;
+}
+
+popping right digit one by one and divide original given number num by each right digit and check.
