@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+vector<string> split(const string &);
+
+/*
+ * Complete the 'miniMaxSum' function below.
+ *
+ * The function accepts INTEGER_ARRAY arr as parameter.
+ */
+
+void miniMaxSum(vector<int> arr) {
+long int mins=0;
+long int maxs=0;
+sort(arr.begin(),arr.end());
+for(int i=0;i<4;i++)
+{
+    mins= mins+ arr[i];
+}
+for(int i=1;i<5;i++)
+{
+    maxs= maxs+ arr[i];
+}
+cout<<mins<<" "<<maxs;
+}
