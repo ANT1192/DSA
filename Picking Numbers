@@ -1,0 +1,21 @@
+#include <vector>
+#include <map>
+#include <algorithm>
+
+int pickingNumbers(std::vector<int> a) {
+    std::map<int, int> mp;
+    for (int e : a) {
+        mp[e]++;
+    }
+    
+    int ans = 0;
+    for (auto it = mp.begin(); it != mp.end(); ++it) {
+        int curr = it->second;
+        if (mp.count(it->first + 1)) {
+            curr += mp[it->first + 1];
+        }
+        ans = std::max(ans, curr);
+    }
+    
+    return ans;
+}
